@@ -55,14 +55,12 @@ public class SendEventActivity extends BaseActivity implements View.OnClickListe
                 EventManager.post(mEvent);
                 break;
             case R.id.btn_click_msg_send:
-
+                Toast.makeText(this, "已发送消息,返回查看", Toast.LENGTH_SHORT).show();
                 mEvent.setId(EventEnum.EVENT_TEST_MSG2);
-
                 HashMap<EventEnum, Object> map = new HashMap<>();
                 map.put(EventEnum.EVENT_TEST_MSG2_KEY, "我是消息体");
                 mEvent.setParams(map);
                 EventManager.post(mEvent);
-
                 break;
         }
     }
